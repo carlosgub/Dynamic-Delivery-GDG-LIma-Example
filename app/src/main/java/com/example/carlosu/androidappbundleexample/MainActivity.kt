@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
         etPassword.setText("1234")
 
         bLogin.setOnClickListener { v ->
-            val intent  = Intent(v.context,AlumnoActivity::class.java)
             if (etEmail.text.toString().equals("a@a.com")
-                && etPassword.text.toString().equals("1234"))  {
+                    && etPassword.text.toString().equals("1234"))  {
+                val intent = Intent(this,AlumnoActivity::class.java)
                 startActivity(intent)
             }else if (etEmail.text.toString().equals("a@a.com")
                     && etPassword.text.toString().equals("12345")) {
@@ -31,7 +31,10 @@ class MainActivity : AppCompatActivity() {
                 val request = SplitInstallRequest.newBuilder().addModule("login_administrativos").build()
                 splitInstallManager
                         .startInstall(request)
-                        .addOnSuccessListener { i: Int? -> "" }
+                        .addOnSuccessListener { i: Int? ->
+                            val intent = Intent(this,
+                                    Class.forName("com.example.carlosu.login_administrativos.AdministrativosActivity"))
+                            startActivity(intent) }
                         .addOnFailureListener(OnFailureListener { exception ->  })
             }
         }
