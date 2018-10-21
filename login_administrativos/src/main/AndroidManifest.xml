@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.example.carlosu.login_administrativos"
-    split="login_administrativos">
+    package="com.example.carlosu.login_administrativos">
 
     <dist:module
+        dist:instant="false"
         dist:onDemand="true"
         dist:title="@string/title_login_administrativos">
-        <dist:fusing include="true" />
+        <dist:fusing dist:include="false" />
     </dist:module>
 
     <application>
