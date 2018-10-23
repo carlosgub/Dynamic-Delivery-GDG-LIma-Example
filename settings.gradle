@@ -1,2 +1,2 @@
 include ':app',
-        ':login_administrativos'
+        ':features:login_administrativos'

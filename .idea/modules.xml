@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidAppBundleExample.iml" filepath="$PROJECT_DIR$/AndroidAppBundleExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/login_administrativos/login_administrativos.iml" filepath="$PROJECT_DIR$/login_administrativos/login_administrativos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features/features.iml" filepath="$PROJECT_DIR$/features/features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features/login_administrativos/login_administrativos.iml" filepath="$PROJECT_DIR$/features/login_administrativos/login_administrativos.iml" />
     </modules>
   </component>
 </project>
