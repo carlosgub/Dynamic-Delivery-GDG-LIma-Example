@@ -3,4 +3,5 @@
     <string name="title_activity_alumno">AlumnoActivity</string>
     <string name="login">Login</string>
     <string name="title_login_administrativos">Administrativos</string>
+    <string name="name_administrativos">login_administrativos</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.example.carlosu.androidappbundleexample.ondemand.login_administrativos"
+    package="com.carlosu.androidappbundleexample.ondemand.login_administrativos"
     split="login_administrativos">
 
     <dist:module
@@ -11,7 +11,7 @@
     </dist:module>
 
     <application>
-        <activity android:name="com.example.carlosu.androidappbundleexample.ondemand.AdministrativosActivity">
+        <activity android:name="com.carlosu.androidappbundleexample.ondemand.AdministrativosActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
