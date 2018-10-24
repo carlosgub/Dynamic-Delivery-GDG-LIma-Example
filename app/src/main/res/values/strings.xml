@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android App Bundle Example</string>
+    <string name="app_name">Dynamic Delivery GDG Lima Example</string>
     <string name="title_activity_alumno">AlumnoActivity</string>
     <string name="login">Login</string>
     <string name="title_login_administrativos">Administrativos</string>
