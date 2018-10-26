@@ -9,18 +9,16 @@ Este ejemplo es para descargar de manera dinamica features de una aplicacion.
 # Pasos para poder compilar la repo
 * Compilar.
 
-# Pasos para probar la app con la funcion Dynamic Delivery
+# Pasos para probar la app con la funcion Dynamic Delivery con cuenta propia
 * Cambiar el aplicationId.
 * Subir la aplicacion a su cuenta de Google Play Console.
 
+# Pasos para probar la app
 * Descargar la aplicacion del play store https://play.google.com/store/apps/details?id=com.carlosu.androidappbundleexample.ondemand
 
 # Cuentas del Log In
-
 * Correo : a@a.com -- contraseña : 1234 -> Log in como alumno
 * Correo : a@a.com -- contraseña : 12345 -> Log in como administrativo (Dynamic Feature)
-
-
 
 # Arquitectura del Proyecto
  ![alt text](https://i.imgur.com/CF7YKcw.jpg)
