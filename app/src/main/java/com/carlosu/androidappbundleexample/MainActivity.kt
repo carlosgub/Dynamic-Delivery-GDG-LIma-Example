@@ -13,12 +13,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val TAG = "DynamicFeatures"
+    private val tag = "DynamicFeatures"
     private val packageNames = "com.carlosu.androidappbundleexample.ondemand"
-    private val AdministrativoClassname = "$packageNames.AdministrativosActivity"
+    private val administrativoClassname = "$packageNames.AdministrativosActivity"
 
     private lateinit var manager: SplitInstallManager
-    lateinit var listener:SplitInstallStateUpdatedListener
+    private lateinit var listener:SplitInstallStateUpdatedListener
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,46 +28,36 @@ class MainActivity : AppCompatActivity() {
         etEmail.setText("a@a.com")
         etPassword.setText("1234")
         btLogin.setOnClickListener { _ ->
-            if (etEmail.text.toString().equals("a@a.com")
-                    && etPassword.text.toString().equals("1234"))   {
+            if (etEmail.text.toString() == "a@a.com"
+                    && etPassword.text.toString() == "1234")   {
                 val intent = Intent(this,AlumnoActivity::class.java)
                 startActivity(intent)
-            }else if (etEmail.text.toString().equals("a@a.com")
-                    && etPassword.text.toString().equals("12345")) {
+            }else if (etEmail.text.toString() == "a@a.com"
+                    && etPassword.text.toString() == "12345") {
                 loadAndLaunchModule(moduleAdministrativos)
             }
         }
 
-        // Creates an instance of SplitInstallManager.
+        // Crear instancia del SplitInstallManager
         manager= SplitInstallManagerFactory.create(this)
 
         //listener para saber el estado del modulo
         listener = SplitInstallStateUpdatedListener { state ->
-            state.moduleNames().forEach { name ->
-            // Handle changes in state.
-                when (state.status()) {
-                    SplitInstallSessionStatus.DOWNLOADING -> {
-                        //  In order to see this, the application has to be uploaded to the Play Store.
-                        displayLoadingState(state, "Downloading $name")
-                    }
-                    SplitInstallSessionStatus.REQUIRES_USER_CONFIRMATION -> {
-                        /*
-                          This may occur when attempting to download a sufficiently large module.
+            when (state.status()) {
+                SplitInstallSessionStatus.DOWNLOADING -> {
+                    displayLoadingState(state, "Descargando el modulo ${state.moduleNames()[0]}")
+                }
+                SplitInstallSessionStatus.REQUIRES_USER_CONFIRMATION -> {
+                    startIntentSender(state.resolutionIntent()?.intentSender, null, 0, 0, 0)
+                }
+                SplitInstallSessionStatus.INSTALLED -> {
+                    launchActivity(administrativoClassname)
+                    displayLogin()
+                }
 
-                          In order to see this, the application has to be uploaded to the Play Store.
-                          Then features can be requested until the confirmation path is triggered.
-                         */
-                        startIntentSender(state.resolutionIntent()?.intentSender, null, 0, 0, 0)
-                    }
-                    SplitInstallSessionStatus.INSTALLED -> {
-                        launchActivity(AdministrativoClassname)
-                        displayLogin()
-                    }
-
-                    SplitInstallSessionStatus.INSTALLING -> displayLoadingState(state, "Instalando Modulo $name")
-                    SplitInstallSessionStatus.FAILED -> {
-                        toastAndLog("Error: ${state.errorCode()} for module ${state.moduleNames()}")
-                    }
+                SplitInstallSessionStatus.INSTALLING -> displayLoadingState(state, "Instalando el Modulo ${state.moduleNames()[0]}")
+                SplitInstallSessionStatus.FAILED -> {
+                    toastAndLog("Error: ${state.errorCode()} for module ${state.moduleNames()}")
                 }
             }
         }
@@ -122,7 +113,7 @@ class MainActivity : AppCompatActivity() {
 
     fun toastAndLog(text: String) {
         Toast.makeText(this, text, Toast.LENGTH_LONG).show()
-        Log.d(TAG, text)
+        Log.d(tag, text)
     }
 
     /**
@@ -134,7 +125,7 @@ class MainActivity : AppCompatActivity() {
         // Skip loading if the module already is installed. Perform success action directly.
         if (manager.installedModules.contains(name)) {
             updateProgressMessage("Ya esta instalado")
-            launchActivity(AdministrativoClassname)
+            launchActivity(administrativoClassname)
             displayLogin()
             return
         }
@@ -147,7 +138,7 @@ class MainActivity : AppCompatActivity() {
         // Load and install the requested feature module.
         manager.startInstall(request)
 
-        updateProgressMessage("Instalando el modulo $name")
+        updateProgressMessage("Cargando!")
     }
 
 }
