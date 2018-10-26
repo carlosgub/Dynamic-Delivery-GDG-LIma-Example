@@ -4,15 +4,15 @@
 
 Este es un ejemplo del uso de Dynamic Delivery de Android App Bundle, presentado en Google I/O 18.
 
-Este ejemplo es para descargar de manera dinamica features de una aplicacion.
+Este ejemplo es para descargar de manera dinámica features de una aplicación.
 
-Que es Android app bundle?
+¿Qué es Android App Bundle?
 
 Android App Bundle es el nuevo formato de publicación de aplicaciones, que te ayudará a crear y lanzar de manera más eficiente tu aplicación. Android App Bundle te permitirá ofrecer una gran experiencia más fácilmente en un tamaño de aplicación más pequeño, lo que te permitirá que más clientes puedan descargar tu aplicación en la actualidad. Es fácil de cambiar. No necesita refactorizar su código para comenzar a beneficiarse de una aplicación más pequeña.
 
 <img src="/images/appBundle.gif" height="300" />
 
-Que es Dynamic Delivery?
+¿Qué es Dynamic Delivery?
 
 Dynamic Delivery es una característica de Android App Bundle que se encuentra en fase beta que ayuda a las empresas o desarrolladores a entregar una aplicación más personalizada a los usuarios mediante la entrega de las funcionalidades de manera dinámica. ¿Como? Se sube un Base APK donde estan todas las funcionalidades que la mayoría de los usuarios usan. Y los demás funcionalidades serán descargados cuando el usuario quiera usar esta característica.
 
@@ -26,18 +26,18 @@ Puntos positivos?
 
 Puntos negativos?
 
-* La única manera de probar la app es subiendo el .abb al play store (Google ya esta trabajando la manera de probarlo de manera offline)
+* La única manera de probar la app es subiendo el .abb al play store (Google ya está trabajando la manera de probarlo de manera offline)
 * Se debe usar la herramienta bundletool para verificar que el .abb no contenga errores antes de subirlo al playstore
 
-# Pasos para poder compilar la repo
+# Aplicación
 <img src="/images/app.gif" height="700" />
 
 # Pasos para poder compilar la repo
 * Compilar.
 
-# Pasos para probar la app con la funcion Dynamic Delivery con cuenta propia
+# Pasos para probar la app con la función Dynamic Delivery con cuenta propia
 * Cambiar el aplicationId.
-* Subir la aplicacion a su cuenta de Google Play Console.
+* Subir la aplicación a su cuenta de Google Play Console.
 
 # Pasos para probar la app
 * Descargar la aplicacion del play store 
@@ -55,7 +55,6 @@ Puntos negativos?
 ---
  * Kotlin [1.2.71] - http://kotlinlang.org
  
- ## Librerias
+ ## Librerías
 ---
  * Ninguna.
- 
