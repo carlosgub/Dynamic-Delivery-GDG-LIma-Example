@@ -10,12 +10,26 @@ Que es Android app bundle?
 
 Android App Bundle es el nuevo formato de publicación de aplicaciones, que te ayudará a crear y lanzar de manera más eficiente tu aplicación. Android App Bundle te permitirá ofrecer una gran experiencia más fácilmente en un tamaño de aplicación más pequeño, lo que te permitirá que más clientes puedan descargar tu aplicación en la actualidad. Es fácil de cambiar. No necesita refactorizar su código para comenzar a beneficiarse de una aplicación más pequeña.
 
-<center><img src="/images/appBundle.gif" height="300" /></center>
+<img src="/images/appBundle.gif" height="300" />
 
 Que es Dynamic Delivery?
 
 Dynamic Delivery es una característica de Android App Bundle que se encuentra en fase beta que ayuda a las empresas o desarrolladores a entregar una aplicación más personalizada a los usuarios mediante la entrega de las funcionalidades de manera dinámica. ¿Como? Se sube un Base APK donde estan todas las funcionalidades que la mayoría de los usuarios usan. Y los demás funcionalidades serán descargados cuando el usuario quiera usar esta característica.
 
+<img src="https://i.imgur.com/ztrm7ko.png" height="500" />
+
+Puntos positivos?
+
+* Reducción del tamaño de la aplicación
+* Mayor cantidad de dispositivos que pueden usar nuestra aplicación base
+* Creación de una aplicación más personalizada para cada usuario.
+
+Puntos negativos?
+
+* La única manera de probar la app es subiendo el .abb al play store (Google ya esta trabajando la manera de probarlo de manera offline)
+* Se debe usar la herramienta bundletool para verificar que el .abb no contenga errores antes de subirlo al playstore
+
+# Pasos para poder compilar la repo
 <img src="/images/app.gif" height="700" />
 
 # Pasos para poder compilar la repo
