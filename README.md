@@ -4,7 +4,7 @@ Este es un ejemplo del uso de Dynamic Delivery de Android App Bundle, presentado
 
 Este ejemplo es para descargar de manera dinamica features de una aplicacion.
 
-<img src="/images/app.gif" height="420" />
+<img src="/images/app.gif" height="700" />
 
 # Pasos para poder compilar la repo
 * Compilar.
