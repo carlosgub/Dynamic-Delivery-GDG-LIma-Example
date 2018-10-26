@@ -13,6 +13,14 @@ Este ejemplo es para descargar de manera dinamica features de una aplicacion.
 * Cambiar el aplicationId.
 * Subir la aplicacion a su cuenta de Google Play Console.
 
+* Descargar la aplicacion del play store https://play.google.com/store/apps/details?id=com.carlosu.androidappbundleexample.ondemand
+
+# Cuentas del Log In
+
+* Correo : a@a.com -- contraseña : 1234 -> Log in como alumno
+* Correo : a@a.com -- contraseña : 12345 -> Log in como administrativo (Dynamic Feature)
+
+
 
 # Arquitectura del Proyecto
  ![alt text](https://i.imgur.com/CF7YKcw.jpg)
